@@ -23,5 +23,14 @@ export class RestoService {
     return this.http.get(`${this.baseUrl}`);
   }
 
+  //Add records 
+
+  // create(payload: Resto): Observable<Resto> {
+  // return this.http.post<Resto>("https://apiresto.cyrisa02.fr/api/restaurants", //payload);
+  //  }
+
+  create(info: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}`, info);
+  }
 
 }

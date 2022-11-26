@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialDesignModule } from './material-design-module/material-design-module.module';
 import { RestoitemComponent } from './restoitem/restoitem.component';
+import { AddRestoComponent } from './add-resto/add-resto.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RestoitemComponent
+    RestoitemComponent,
+    AddRestoComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { RestoitemComponent } from './restoitem/restoitem.component';
     BrowserAnimationsModule,
     MaterialDesignModule,
     HttpClientModule,
+    FormsModule
 
   ],
   providers: [],
