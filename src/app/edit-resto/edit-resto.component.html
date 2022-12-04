@@ -1,0 +1,45 @@
+<div class="container allRestaurant">
+<mat-card>
+<div>
+<h2 style="text-align: center;">Update Restaurant Old Details Here ! </h2>
+	<div>
+		<mat-form-field appearance="outline" class="form-elements">
+    		<mat-label>Restaurant Name</mat-label>
+    		<input matInput placeholder="Restaurant Name" [(ngModel)]="restaurantRecords.name">    
+  		</mat-form-field>
+  	</div>
+ 	<div>
+  		<mat-form-field appearance="outline" class="form-elements">
+    		<mat-label>Restaurant Owner</mat-label>
+    		<input matInput placeholder="Name of Owner" [(ngModel)]="restaurantRecords.owner">    
+  		</mat-form-field>
+	</div>
+
+	<div>
+		<mat-form-field appearance="outline" class="form-elements">
+   		<mat-label>Restaurant Mobile</mat-label>
+    		<input matInput placeholder="mobile No" [(ngModel)]="restaurantRecords.mobile">    
+  		</mat-form-field>
+	</div>
+
+	<div>
+		<mat-form-field appearance="outline" class="form-elements">
+    		<mat-label>Restaurant Email</mat-label>
+    		<input matInput placeholder="Resaturant Email Id" [(ngModel)]="restaurantRecords.email">    
+  		</mat-form-field>
+	</div>
+
+	<div>
+		<mat-form-field appearance="outline" class="form-elements">
+    		<mat-label>Restaurant Location</mat-label>
+    		<input matInput placeholder="Location" [(ngModel)]="restaurantRecords.location">    
+  		</mat-form-field>
+	</div>
+	<div>
+		<button mat-raised-button color="primary" type="button" (click)="updateRecords()">Update Records</button>
+	</div>
+	
+	</div>
+</mat-card>
+</div>
+

@@ -1,6 +1,14 @@
-<div *ngFor='let item of serviceApi.list' style="text-align:center">
+<div *ngFor='let item of serviceApi.list ' style="text-align:center">
 
 	<h2>{{ item.name}}
 		-
+		
+		{{ item['id'] }}
 	</h2>
+	
+
+	<a [routerLink]="['/edit-restaurant', item['id'] ]">
+    <mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>
+    </a>
+	
 </div>

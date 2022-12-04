@@ -9,7 +9,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 @Injectable({
   providedIn: 'root'
 })
-export class RestoService {
+export class RestoService2 {
   private baseUrl = 'https://apiresto.cyrisa02.fr/api/restaurants';
 
   list !: Resto[];

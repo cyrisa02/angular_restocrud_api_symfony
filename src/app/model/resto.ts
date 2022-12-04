@@ -1,4 +1,5 @@
 export class Resto {
+    [x: string]: any;
 
     name !: string;
     owner !: string;
