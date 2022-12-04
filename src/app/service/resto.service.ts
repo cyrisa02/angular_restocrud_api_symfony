@@ -34,4 +34,15 @@ export class RestoService {
         return this.http.post(`${this.baseUrl}`, info);
     }
 
+    // Get records by Id
+
+    getbyId(id: number): Observable<Resto> {
+        return this.http.get<Resto>(`https://apiresto.cyrisa02.fr/api/restaurants/${id}`);
+    }
+
+    //update Records
+
+    update(payload: Resto): Observable<Resto> {
+        return this.http.put<Resto>(`https://apiresto.cyrisa02.fr/api/restaurants/${payload['id']}`, payload);
+    }
 }

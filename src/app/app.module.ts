@@ -8,13 +8,15 @@ import { MaterialDesignModule } from './material-design-module/material-design-m
 import { RestoitemComponent } from './restoitem/restoitem.component';
 import { AddRestoComponent } from './add-resto/add-resto.component';
 import { FormsModule } from '@angular/forms';
+import { EditRestoComponent } from './edit-resto/edit-resto.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RestoitemComponent,
-    AddRestoComponent
+    AddRestoComponent,
+    EditRestoComponent
   ],
   imports: [
     BrowserModule,
