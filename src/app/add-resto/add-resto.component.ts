@@ -10,7 +10,7 @@ import { RestoService } from '../service/resto.service';
 })
 export class AddRestoComponent implements OnInit {
   restaurantRecords: Resto = {
-    id: 0,
+
     name: '',
     owner: '',
     mobile: '',
@@ -24,9 +24,15 @@ export class AddRestoComponent implements OnInit {
   }
 
   addRecords() {
-    this.restoService.create(this.restaurantRecords).subscribe(() => {
+    this.restoService.create(this.restaurantRecords).subscribe((resp) => {
+      console.log(resp);
       this.router.navigate(["/"]);
     })
+
+    // https://github.com/cod3rcursos/angular-crud/blob/master/frontend/src/app/components/product/product-create/product-create.component.ts
+
+
+
   }
 
 
