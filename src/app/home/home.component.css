@@ -1,0 +1,20 @@
+.container {
+    
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.container p {
+    display: inline-block;
+   max-width: 60rem;
+}
+
+.center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.center a {
+    display: inline-block;
+    min-width: 15rem;
+}
