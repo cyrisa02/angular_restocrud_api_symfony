@@ -10,6 +10,7 @@ import { AddRestoComponent } from './add-resto/add-resto.component';
 import { FormsModule } from '@angular/forms';
 import { EditRestoComponent } from './edit-resto/edit-resto.component';
 import { DeleteRestoComponent } from './delete-resto/delete-resto.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,7 +20,8 @@ import { DeleteRestoComponent } from './delete-resto/delete-resto.component';
     RestoitemComponent,
     AddRestoComponent,
     EditRestoComponent,
-    DeleteRestoComponent
+    DeleteRestoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
