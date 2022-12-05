@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { DeleteRestoComponent } from '../delete-resto/delete-resto.component';
 import { RestoService } from '../service/resto.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { RestoService } from '../service/resto.service';
 })
 export class RestoitemComponent implements OnInit {
 
-  constructor(public serviceApi: RestoService, private router: Router) { }
+
+  constructor(public serviceApi: RestoService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getData();
@@ -23,4 +26,13 @@ export class RestoitemComponent implements OnInit {
     );
 
   }
+
+  openDeleteModel(id: number) {
+    const deleteConfm = this.dialog.open(DeleteRestoComponent, {
+      width: '350px',
+      data: { id }
+    });
+
+  }
+
 }

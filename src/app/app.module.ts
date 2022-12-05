@@ -9,6 +9,8 @@ import { RestoitemComponent } from './restoitem/restoitem.component';
 import { AddRestoComponent } from './add-resto/add-resto.component';
 import { FormsModule } from '@angular/forms';
 import { EditRestoComponent } from './edit-resto/edit-resto.component';
+import { DeleteRestoComponent } from './delete-resto/delete-resto.component';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { EditRestoComponent } from './edit-resto/edit-resto.component';
     AppComponent,
     RestoitemComponent,
     AddRestoComponent,
-    EditRestoComponent
+    EditRestoComponent,
+    DeleteRestoComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import { EditRestoComponent } from './edit-resto/edit-resto.component';
     BrowserAnimationsModule,
     MaterialDesignModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+
+
 
   ],
   providers: [],

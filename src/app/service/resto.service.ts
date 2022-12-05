@@ -45,4 +45,9 @@ export class RestoService {
     update(payload: Resto): Observable<Resto> {
         return this.http.put<Resto>(`https://apiresto.cyrisa02.fr/api/restaurants/${payload['id']}`, payload);
     }
+
+    //Delete records
+    delete(id: number) {
+        return this.http.delete(`https://apiresto.cyrisa02.fr/api/restaurants/${id}`);
+    }
 }
