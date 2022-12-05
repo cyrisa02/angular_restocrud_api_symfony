@@ -8,7 +8,13 @@
 	
 
 	<a [routerLink]="['/edit-restaurant', item['id'] ]">
+	
+	
     <mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>
+    </a>
+    
+    <a [routerLink]="['/']">
+    <mat-icon aria-hidden="false" (click)="openDeleteModel(item['id'])" aria-label="Example delete icon" fontIcon="delete"></mat-icon>
     </a>
 	
 </div>
