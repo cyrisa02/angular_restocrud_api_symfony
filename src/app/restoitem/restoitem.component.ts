@@ -11,6 +11,7 @@ import { RestoService } from '../service/resto.service';
 })
 export class RestoitemComponent implements OnInit {
 
+
   constructor(public serviceApi: RestoService, private router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -27,10 +28,11 @@ export class RestoitemComponent implements OnInit {
   }
 
   openDeleteModel(id: number) {
-    this.dialog.open(DeleteRestoComponent, {
-      width: '250px',
+    const deleteConfm = this.dialog.open(DeleteRestoComponent, {
+      width: '350px',
       data: { id }
-    })
+    });
+
   }
 
 }

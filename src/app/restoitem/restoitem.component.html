@@ -1,20 +1,44 @@
-<div *ngFor='let item of serviceApi.list ' style="text-align:center">
 
-	<h2>{{ item.name}}
-		-
-		
-		{{ item['id'] }}
-	</h2>
-	
-
-	<a [routerLink]="['/edit-restaurant', item['id'] ]">
-	
-	
-    <mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>
-    </a>
-    
-    <a [routerLink]="['/']">
-    <mat-icon aria-hidden="false" (click)="openDeleteModel(item['id'])" aria-label="Example delete icon" fontIcon="delete"></mat-icon>
-    </a>
-	
+<div class="center">
+<a mat-raised-button color="primary" [routerLink]="['/add-resto']" class="linkresto">+ Add Restaurant</a>
 </div>
+	<table class="tableau-style">
+	
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Owner</th>
+				<th>Mobile</th>
+				<th>Email</th>
+				<th>Location</th>					
+				<th>Action</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			
+				<tr *ngFor='let item of serviceApi.list '>				
+					<td>{{ item['id'] }}</td>							
+					<td>{{item.name}}</td>						
+					<td>{{item.owner}}</td>					
+					<td>{{item.mobile}} </td>					
+					<td>{{item.email}} </td>					
+					<td>{{item.location}} </td>					
+					<td><a [routerLink]="['/edit-restaurant', item['id'] ]">	
+    					<mat-icon aria-hidden="false" aria-label="Example edit icon" fontIcon="edit"></mat-icon>
+   					 </a>
+    					<a [routerLink]="['/']">
+    					<mat-icon aria-hidden="false" (click)="openDeleteModel(item['id'])" aria-label="Example delete icon" 	
+    					fontIcon="delete"></mat-icon></a>    					
+     					</td>     					
+				</tr>
+			
+		</tbody>
+		
+		
+</table>
+
+
+
+
