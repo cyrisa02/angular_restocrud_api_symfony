@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "9c518c54-b9a3-4ffa-8a08-defb8a178708",
+		"name": "Resto API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20202123"
+	},
+	"item": [
+		{
+			"name": "Should create a restaurant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"lastResto\", pm.response.json()['id']);",
+							"",
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(201)",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"name\": \"{{$randomLoremWord}}\",\n            \"owner\": \"{{$randomLoremWords}}\",\n            \"mobile\": \"{{$randomInt}}\",\n            \"email\": \"{{$randomEmail}}\",\n            \"location\": \"{{$randomCity}}\"\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/restaurants",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Should edit a reataurant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Update Name\", function() {",
+							"\tpm.expect(pm.response.json()['name']).to.eql(\"Modification\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Modification\",\n    \"owner\": \"John Doe Postman\",\n    \"mobile\": \"5689741\",\n    \"email\": \"john@gmail.com\",\n    \"location\": \"Postamn\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/restaurants/{{lastResto}}",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"restaurants",
+						"{{lastResto}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "should remove a restaurant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"\tpm.response.to.have.status(204);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}api/restaurants/{{lastResto}}",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"restaurants",
+						"{{lastResto}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
