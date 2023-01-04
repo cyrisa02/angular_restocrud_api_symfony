@@ -19,3 +19,10 @@ puis dans home.component.html
 faire un test sur le navigateur
 
 ## Mettre à jour le dashboard.component.ts
+
+## Mettre à jour le dashboard.component.html
+
+puis
+ng build
+
+firebase deploy
