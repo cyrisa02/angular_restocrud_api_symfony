@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { EditRestoComponent } from './edit-resto/edit-resto.component';
 import { DeleteRestoComponent } from './delete-resto/delete-resto.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     AddRestoComponent,
     EditRestoComponent,
     DeleteRestoComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,3 @@
+site_name: angular_food
+docs_dir: ./doc
+theme: readthedocs
